@@ -68,7 +68,10 @@ Sample taken = 0
 #### lfw: percent =  60  d =  3 ![LFWRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFW60.png)
 #### lfw: percent =  80  d =  4 ![LFWRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFW80.png)
 
-#### y_projection size comparison
+### Conclusion
+ The appearance of the reconstructions as we retain more dimensions sharpen. However, we might want to take advantage of this. For example in Iris the best looking set was the 20% or 1d. This is definitly not the case with the other datasets. LFW was unrecognizable bellow 80%.
+
+### y_projection size comparison
 I saved an 80% or 4D projection of the first sample. The size of lfwcrop is 433,553,536, bites or aroun 433MB. There are 13231 frames inside of lfwcrop. That's around 32768 bytes per frame. Our projection is only 2176 bytes. That's 6.64% the size! That's a huge reduction! We can see that lfwcrop has 64 dimensions but our projection at 80% data retention has just 4 dimensions! 4/64 just happens to be 6.25%. That's very close to our real world value. I suspect the difference between our theoretical value and the one we got is overhead from numpy and the .npy filetype. 
 
 ## Licensing
