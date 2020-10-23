@@ -19,6 +19,16 @@ The Basics
 4. Project onto the d-dimensional subspace defined by the first d principal component <div style="text-align: right"><img src="https://render.githubusercontent.com/render/math?math=Y[:,0:d]"><div> 
 5. Reconstruct <div style="text-align: right"><img src="https://render.githubusercontent.com/render/math?math=X^*=(YP^T)\sigma +\mu "><div> 
 
+## Report
+There are three parts to this report. Each part includes an eigenvector heatmap, a scaled eigenvector scree plot, and reconstructions of four stages of data retention. The Optdigits and LFW Crop sections include the showcase of random images alongside a data retention showcase.
+### Part I - Iris
+
+### Part II - Optdigits
+
+### Part III - LFW Crop
+
+
+
 ## Licensing
 
 GNU General Public License v3.0
