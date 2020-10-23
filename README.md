@@ -1,2 +1,2 @@
-# PCA-Example
-PCA Real World Example
+# PCA Example
+Principal Components Analysis Real World Example
