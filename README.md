@@ -1,12 +1,13 @@
 # PCA Example
 
-Principal Components Analysis Real World Example
+Principal Components Analysis Real World Example - Project 4 Report for Machine Learning
 
 ## Overview
 
 ### Description
 
 An example of Principal Component Analysis to reduce the dimensionality of datasets. Three test datasets are used, `Iris`, `Optdigits`, and `LFW Crop`. They're placed in a `/data` directory which is under `.gitignore`. As such they are not uploaded to this repository. All data has been preprocessed by removing all strings.
+> Notice: This code base is not maintained. Many things are hard code. The code in this repository was strictly used for created the graphics for this report and **is not intended to be forked or reused.** It may be used for reference within the confines of the license.
 
 ### Algorithm
 
@@ -22,11 +23,27 @@ The Basics
 ## Report
 There are three parts to this report. Each part includes an eigenvector heatmap, a scaled eigenvector scree plot, and reconstructions of four stages of data retention. The Optdigits and LFW Crop sections include the showcase of random images alongside a data retention showcase.
 ### Part I - Iris
+Iris at 80% retension used  2  dimensions.
+Iris: percent =  20  d =  1
+Iris: percent =  40  d =  1
+Iris: percent =  60  d =  1
+Iris: percent =  80  d =  2
 
 ### Part II - Optdigits
+Sample taken = 0
+Optdigits at 80% retension used  2  dimensions.
+Optdigits: percent =  20  d =  1
+Optdigits: percent =  40  d =  1
+Optdigits: percent =  60  d =  1
+Optdigits: percent =  80  d =  2
 
-### Part III - LFW Crop
-
+### Part III - LFW Crop 
+Sample taken = 0
+lfw at 80% retension used  4  dimensions.
+lfw: percent =  20  d =  1
+lfw: percent =  40  d =  2
+lfw: percent =  60  d =  3
+lfw: percent =  80  d =  4
 
 
 ## Licensing

@@ -37,7 +37,7 @@ def pcaPercent(data, percent=80):
             break
     y_proj = y[:,0:d]                            #4. Project onto the d-dimensional subspace defined by the first d principal component
     data_rec = (y_proj @ pc[:,0:d].T)*std + mean #5. Reconstruct
-    return data_rec, eig, scaled_eig
+    return data_rec, eig, scaled_eig, d
 
 def pca(data, d=2):
     """[PCA]
@@ -62,15 +62,13 @@ def TDExample(data):
     #plt.show()
     #plt.imshow(pca(data[5,:,:], 3))
     #plt.imshow(pcaPercent(np.mean(data,axis=0), 50)[0])
-    heatmap(pcaPercent(data[0,:,:])[1])
+    #heatmap(pcaPercent(data[0,:,:])[1])
     #screeplot(pcaPercent(np.mean(data,axis=0), 50)[2])
     #plt.show()
     #plt.imshow(np.mean(data,axis=0))
     #plt.show()
     #plt.imshow(pcaPercent(np.mean(data,axis=0), 25) @ np.mean(data,axis=0))
- 
-
-
+    pass
 
 def report():
     """ 
@@ -97,8 +95,78 @@ def report():
     
     """ 
     #Part I - Iris
+    iris = Utils.parse("./data/iris.data")
+    """
+    Visualize the sorted eigenvectors with a heatmap, with labeled axes.
+    Visualize the sorted, scaled eigenvalues with a scree plot.
+    How many dimensions are required in the projection in order to retain 80% of the information in the dataset?
+    
 
-    pass
+    pca = pcaPercent(iris, 80)  #returns data_rec, eig, scaled_eig, d
+    #heatmap(pca[1])
+    #screeplot(pca[2])
+    print("Iris at 80% retension used ", pca[3], " dimensions.")
+
+   
+    Visualize the rotated dataset as a 2D scatterplot by  projecting onto the first 2 principal components.
+    Reconstruct the dataset following several different projections with at least 4 different varying degrees of information retention
+    For Iris: Visualize the original (raw) and reconstructed data in 2 different colors in the same 2D scatterplot. Use petal length as the X axis and petal width as the Y axis. 
+    """
+    #sns.heatmap(iris, cmap='Blues')
+    #sns.heatmap(pcaPercent(iris, 25)[0], cmap='Reds')
+    #plt.show()
+    """
+    sns.heatmap(pcaPercent(iris, 20)[0])
+    print()
+    plt.show() 
+    sns.heatmap(pcaPercent(iris, 50)[0])
+    plt.show()
+    sns.heatmap(pcaPercent(iris, 70)[0])
+    plt.show()
+    sns.heatmap(pcaPercent(iris, 100)[0])
+    plt.show()
+    sns.heatmap(iris)
+
+    for x in range(20,100, 20):
+        pca = pcaPercent(iris, x)
+        sns.heatmap(pca[0])
+        print("Iris: percent = ", x, " d = ", pca[3])
+        plt.show()
+    """
+    optRaw = Utils.parse("./data/optdigits.tra")
+    #optdigits require some processing
+    optclass = optRaw[:, -1]        #we save the class
+    opt = optRaw[:, :-1]             #then split off the class
+    opt = opt.reshape(3823, 8, 8)  
+    """
+    pca = pcaPercent(opt[0,:,:], 80)
+    pca = pcaPercent(iris, 80)  #returns data_rec, eig, scaled_eig, d
+    #heatmap(pca[1])
+    #screeplot(pca[2])
+    print("Iris at 80% retension used ", pca[3], " dimensions.") 
+    for x in range(20,100, 20):
+        pca = pcaPercent(opt[0,:,:], x)
+        plt.imshow(pca[0])
+        print("Opt: percent = ", x, " d = ", pca[3])
+        plt.show()
+    """
+    lfw = Utils.parse("./data/lfwcrop.npy")  
+    pca = pcaPercent(lfw[0,:,:], 80)
+    
+    #heatmap(pca[1])
+    #screeplot(pca[2])
+    #print("lfw at 80% retension used ", pca[3], " dimensions.") 
+    """
+    for x in range(20,100, 20):
+        pca = pcaPercent(lfw[0,:,:], x)
+        plt.imshow(pca[0])
+        print("lfw: percent = ", x, " d = ", pca[3])
+        plt.show()
+    """
+    plt.imshow(lfw[0,:,:])
+    plt.show()
+    plt.imshow(opt[0,:,:])
+
 
 def heatmap(eig):
     sns.heatmap(eig.reshape(-1, 1))
@@ -123,15 +191,9 @@ def screeplot(scaled_eig):
     #both subplots share this label
     ax[1].set_ylabel("persent of retained information")
     ax[1].set_xlabel("Principle Componet")
+    plt.show()
+
 
 if __name__=="__main__":
-    iris = Utils.parse("./data/iris.data")
-    lfw = Utils.parse("./data/lfwcrop.npy") 
-    optRaw = Utils.parse("./data/optdigits.tra")
-    #optdigits require some processing
-    optclass = optRaw[:, -1]        #we save the class
-    opt = optRaw[:, :-1]             #then split off the class
-    opt = opt.reshape(3823, 8, 8)
-    TDExample(lfw)
-
+    report()
     plt.show()
