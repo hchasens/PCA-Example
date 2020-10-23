@@ -37,7 +37,7 @@ def pcaPercent(data, percent=80):
             break
     y_proj = y[:,0:d]                            #4. Project onto the d-dimensional subspace defined by the first d principal component
     data_rec = (y_proj @ pc[:,0:d].T)*std + mean #5. Reconstruct
-    return data_rec, eig, scaled_eig, d
+    return data_rec, eig, scaled_eig, d, y_proj
 
 def pca(data, d=2):
     """[PCA]
@@ -93,10 +93,8 @@ def report():
         Visualize each of these reconstructions as a heatmap, alongside the original.
         Explain in your report: What happens to the appearance of these reconstructions as you retain more dimensions?
     
-    """ 
     #Part I - Iris
     iris = Utils.parse("./data/iris.data")
-    """
     Visualize the sorted eigenvectors with a heatmap, with labeled axes.
     Visualize the sorted, scaled eigenvalues with a scree plot.
     How many dimensions are required in the projection in order to retain 80% of the information in the dataset?
@@ -132,13 +130,11 @@ def report():
         sns.heatmap(pca[0])
         print("Iris: percent = ", x, " d = ", pca[3])
         plt.show()
-    """
     optRaw = Utils.parse("./data/optdigits.tra")
     #optdigits require some processing
     optclass = optRaw[:, -1]        #we save the class
     opt = optRaw[:, :-1]             #then split off the class
     opt = opt.reshape(3823, 8, 8)  
-    """
     pca = pcaPercent(opt[0,:,:], 80)
     pca = pcaPercent(iris, 80)  #returns data_rec, eig, scaled_eig, d
     #heatmap(pca[1])
@@ -150,9 +146,10 @@ def report():
         print("Opt: percent = ", x, " d = ", pca[3])
         plt.show()
     """
-    lfw = Utils.parse("./data/lfwcrop.npy")  
-    pca = pcaPercent(lfw[0,:,:], 80)
-    
+    lfw = Utils.parse("../data/lfwcrop.npy")  
+    print(lfw.shape)
+    #pca = pcaPercent(lfw[0,:,:], 80)
+    #np.save("lfwcrop_compressed", pca[4])
     #heatmap(pca[1])
     #screeplot(pca[2])
     #print("lfw at 80% retension used ", pca[3], " dimensions.") 
@@ -163,9 +160,9 @@ def report():
         print("lfw: percent = ", x, " d = ", pca[3])
         plt.show()
     """
-    plt.imshow(lfw[0,:,:])
-    plt.show()
-    plt.imshow(opt[0,:,:])
+    #plt.imshow(lfw[0,:,:])
+    #plt.show()
+    #plt.imshow(opt[0,:,:])
 
 
 def heatmap(eig):

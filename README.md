@@ -23,7 +23,9 @@ The Basics
 ## Report
 There are three parts to this report. Each part includes an eigenvector heatmap, a scaled eigenvector scree plot, and reconstructions of four stages of data retention. The Optdigits and LFW Crop sections include the showcase of random images alongside a data retention showcase.
 ### Part I - Iris
+
 #### Iris Raw ![IrisRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/irisRaw.png)
+
 #### Iris PCA Scree Map ![IrisScree](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/IrisScree.png)
 #### Eigenvalue Heatmap ![EiganHeatmap](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/IrisEigenHeatmap.png)
 #### Iris Red Vs Blue
@@ -31,6 +33,7 @@ Iris Raw - Blue
 Iris 25% PCA - Red
 For this graph I tried to use contrasting colors but I think red overtook blue. That and because blue holds more detail it might not be able to stand its ground visually against red 20% PCA.
 ![RedVBlue](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/IrisRawBlue25Red.png)
+
 #### Iris at 80% retension used  2  dimensions.
 #### Iris: percent =  20  d =  1 ![Iris20](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/Iris20.png)
 At d = 1 this holds 25% of our data. It clearly still hold enough to identify Irises.
@@ -54,16 +57,19 @@ Sample taken = 0
 ### Part III - LFW Crop 
 Sample taken = 0
 #### LFW Raw ![LFWRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFWRaw.png)
+
 #### LFW PCA Scree Map ![LFWScree](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFWScree.png)
 #### Eigenvalue Heatmap ![EiganHeatmap](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFWEigenHeatmap.png)
-
 
 #### lfw at 80% retension used  4  dimensions.
 #### lfw: percent =  20  d =  1 ![LFWRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFW20.png)
 #### lfw: percent =  40  d =  2 ![LFWRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFW40.png)
+
 #### lfw: percent =  60  d =  3 ![LFWRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFW60.png)
 #### lfw: percent =  80  d =  4 ![LFWRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFW80.png)
 
+#### y_projection size comparison
+I saved an 80% or 4D projection of the first sample. The size of lfwcrop is 433,553,536, bites or aroun 433MB. There are 13231 frames inside of lfwcrop. That's around 32768 bytes per frame. Our projection is only 2176 bytes. That's 6.64% the size! That's a huge reduction! We can see that lfwcrop has 64 dimensions but our projection at 80% data retention has just 4 dimensions! 4/64 just happens to be 6.25%. That's very close to our real world value. I suspect the difference between our theoretical value and the one we got is overhead from numpy and the .npy filetype. 
 
 ## Licensing
 
