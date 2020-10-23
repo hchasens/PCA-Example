@@ -23,17 +23,20 @@ The Basics
 ## Report
 There are three parts to this report. Each part includes an eigenvector heatmap, a scaled eigenvector scree plot, and reconstructions of four stages of data retention. The Optdigits and LFW Crop sections include the showcase of random images alongside a data retention showcase.
 ### Part I - Iris
-Iris Raw ![IrisRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/irisRaw.png)
-Iris PCA Scree Map ![IrisScree](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/IrisScree.png)
-Eigenvalue Heatmap ![EiganHeatmap](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/IrisEigenHeatmap.png)
+#### Iris Raw ![IrisRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/irisRaw.png)
+#### Iris PCA Scree Map ![IrisScree](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/IrisScree.png)
+#### Eigenvalue Heatmap ![EiganHeatmap](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/IrisEigenHeatmap.png)
+#### Iris Red Vs Blue
 Iris Raw - Blue
-Iris 25% - Red
+Iris 25% PCA - Red
+For this graph I tried to use contrasting colors but I think red overtook blue. That and because blue holds more detail it might not be able to stand its ground visually against red 20% PCA.
 ![RedVBlue](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/IrisRawBlue25Red.png)
-Iris at 80% retension used  2  dimensions.
-Iris: percent =  20  d =  1 ![Iris20](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/Iris20.png)
-Iris: percent =  40  d =  1 ![Iris40](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/Iris40.png)
-Iris: percent =  60  d =  1 ![Iris60](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/Iris60.png)
-Iris: percent =  80  d =  2 ![Iris80](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/Iris80.png)
+#### Iris at 80% retension used  2  dimensions.
+#### Iris: percent =  20  d =  1 ![Iris20](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/Iris20.png)
+At d = 1 this holds 25% of our data. It clearly still hold enough to identify Irises.
+#### Iris: percent =  40  d =  1 ![Iris40](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/Iris40.png)
+#### Iris: percent =  60  d =  1 ![Iris60](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/Iris60.png)
+#### Iris: percent =  80  d =  2 ![Iris80](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/iris/Iris80.png)
 
 ### Part II - Optdigits
 Sample taken = 0
