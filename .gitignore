@@ -1,1 +1,3 @@
 .vscode
+/data
+pca_cov_template.py
