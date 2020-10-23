@@ -6,7 +6,7 @@ Principal Components Analysis Real World Example
 
 ### Description
 
-An example of Principal Component Analysis to reduce the dimensionality of datasets. Three test datasets are used, `Iris`, `Optdigits`, and `LFW Crop`. They're placed in a `/data` directory which is under `.gitignore`. As such they are not uploaded to this repository.
+An example of Principal Component Analysis to reduce the dimensionality of datasets. Three test datasets are used, `Iris`, `Optdigits`, and `LFW Crop`. They're placed in a `/data` directory which is under `.gitignore`. As such they are not uploaded to this repository. All data has been preprocessed by removing all strings.
 
 ### Algorithm
 
