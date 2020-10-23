@@ -40,11 +40,16 @@ At d = 1 this holds 25% of our data. It clearly still hold enough to identify Ir
 
 ### Part II - Optdigits
 Sample taken = 0
-Optdigits at 80% retension used  2  dimensions.
-Optdigits: percent =  20  d =  1
-Optdigits: percent =  40  d =  1
-Optdigits: percent =  60  d =  1
-Optdigits: percent =  80  d =  2
+
+#### Octdigit Raw ![OctRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/optdigits/OptRaw.png)
+#### Oct PCA Scree Map ![OctScree](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/optdigits/OptScree.png)
+#### Eigenvalue Heatmap ![EiganHeatmap](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/optdigits/OptEigenHeatmap.png)
+
+#### Optdigits at 80% retension used  2  dimensions.
+#### Optdigits: percent =  20  d =  1 ![Opt20](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/optdigits/Opt20.png)
+#### Optdigits: percent =  40  d =  1 ![Opt40](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/optdigits/Opt40.png)
+#### Optdigits: percent =  60  d =  1 ![Opt60](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/optdigits/Opt60.png)
+#### Optdigits: percent =  80  d =  2 ![Opt80](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/optdigits/Opt80.png)
 
 ### Part III - LFW Crop 
 Sample taken = 0
