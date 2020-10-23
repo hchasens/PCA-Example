@@ -53,11 +53,16 @@ Sample taken = 0
 
 ### Part III - LFW Crop 
 Sample taken = 0
-lfw at 80% retension used  4  dimensions.
-lfw: percent =  20  d =  1
-lfw: percent =  40  d =  2
-lfw: percent =  60  d =  3
-lfw: percent =  80  d =  4
+#### LFW Raw ![LFWRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFWRaw.png)
+#### LFW PCA Scree Map ![LFWScree](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFWScree.png)
+#### Eigenvalue Heatmap ![EiganHeatmap](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFWEigenHeatmap.png)
+
+
+#### lfw at 80% retension used  4  dimensions.
+#### lfw: percent =  20  d =  1 ![LFWRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFW20.png)
+#### lfw: percent =  40  d =  2 ![LFWRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFW40.png)
+#### lfw: percent =  60  d =  3 ![LFWRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFW60.png)
+#### lfw: percent =  80  d =  4 ![LFWRaw](https://raw.githubusercontent.com/hchasens/PCA-Example/main/figures/lfwcrop/LFW80.png)
 
 
 ## Licensing
